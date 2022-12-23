@@ -59,8 +59,6 @@ public class AppUserService implements UserDetailsService {
 
         confirmationTokenService.saveConfirmationToken(confirmationToken);
 
-        // Send an email
-
         return String.format("%s\n", token);
     }
 
