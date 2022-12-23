@@ -6,6 +6,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 
 import com.login.form.appuser.AppUserService;
@@ -15,6 +16,7 @@ import lombok.AllArgsConstructor;
 
 @Configuration
 @AllArgsConstructor
+@EnableWebSecurity
 public class WebSecurityConfig {
 
     private final AppUserService appUserService;
@@ -23,9 +25,10 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
+            .authenticationProvider(authenticationProvider())
             .csrf().disable()
             .authorizeHttpRequests()
-            .requestMatchers("/api/registration")
+            .requestMatchers("/**")
                 .permitAll()
             .anyRequest()
             .authenticated()
@@ -39,7 +42,7 @@ public class WebSecurityConfig {
     public DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
 
-        provider.setPasswordEncoder(encoder.passwordEncoder());
+        provider.setPasswordEncoder(encoder.bCryptPasswordEncoder());
         provider.setUserDetailsService(appUserService);
 
         return provider;
