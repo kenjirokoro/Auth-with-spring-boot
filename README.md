@@ -46,6 +46,6 @@ spring:
 ```
 
 ## Documentation
-Here's some awesome <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">documentation</a>.
+Here's some awesome <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">documentation</a>.
 
-Like <b>Auth-with-spring-boot</b>? Give a star on <a href="https://github.com/frogindreams/Auth-with-spring-boot/">Github</a>.
+Like <b>Auth-with-spring-boot</b>? Give a star on <a href="https://github.com/frogindreams/Auth-with-spring-boot/" target="_blank">Github</a>.
