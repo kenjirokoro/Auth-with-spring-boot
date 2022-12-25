@@ -1,1 +1,0 @@
-{"timestamp":"2022-12-23T10:52:14.778+00:00","status":400,"error":"Bad Request","message":"Required request body is missing: public java.lang.String com.login.form.registration.RegistrationController.register(com.login.form.registration.RegistrationRequest)","path":"/api/registration"}
