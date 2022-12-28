@@ -3,6 +3,9 @@
 Simple example of registration & login API. <b>Enjoy yourself!</b><br/>
 But pay attention, there's no tests of this, for now and for this tiny project.
 
+## What is Spring Boot?
+Framework that makes easier, quicker path to set up, configure, and run apps.
+
 ## What have I used 
 I recommend you to see the build.gradle
 ```
